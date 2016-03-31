@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Saving Your Car</title>
+        <meta charset="utf-8" />
+	
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+                <script type="text/javascript">
+                    function validacp(e)
+            {
+                var keycar;
+                if(window.event)
+                    keycar = e.keyCode;
+                else
+                    if(e.which)
+                        keycar=e.which;
+                if(keycar>=48 && keycar<=57)
+                    return true;
+                else
+                    return false;
+                
+            }
+            function valida(e)
+            {
+                var keylet;
+                if(window.event)
+                    keylet = e.keyCode; /*IE*/
+                else
+                    if(e.which)
+                        keylet = e.which; //Netscape firefox opera
+                
+                if((keylet>=97&&keylet<=122)||keylet===8 ||keylet===32 || keylet===239 ||keylet>=65&&keylet<=90 ||keylet>=160&&keylet<=163)
+                  return true;
+                else
+                  return false;
+            }
+                    
+                </script>
+    </head>
+    
+    <body oncopy="return false" oncut="return false" onpaste="return false" class="landing">
+        <div>
+           <header id="header">
+					<h1 id="logo">Saving Your Car</h1>
+					<nav id="nav">
+						<ul>
+						
+                                                        <li><span class="button disabled"><a href="index.html#two">Iniciar sesi&oacute;n</a></span></li>
+                                                        <li><span class="button disabled"><a href="registro.html">Registrarse</a></span></li>
+						</ul>
+					</nav>
+				</header>
+
+            <br><br><br>
+		
+            <form method="post" action="alta" class="container 50%">
+            <div align="center"><h2><b>Registro</b></h2>
+                   
+                    <div><h3>Usuario</h3>
+                        <div class="6u 12u(xsmall)">
+                            <input type="text" name="Compania" id="Compania" value="" placeholder="Compania" onKeyPress="return valida(event)" required/><br>
+                            <input type="text" name="NombreEmpleado" id="NombreEmpleado" value="" placeholder="Nombre" onKeyPress="return valida(event)" required/><br>
+                            <input type="text" name="edad" id="edad" value="" placeholder="Edad"  onKeyPress="return validacp(event)" maxlength="2" required/><br>
+                            
+                            <div><h4>Sexo</h4>
+                            <div class="4u 12u$(medium)">
+                                <input type="radio" id="priority-low" name="sexo" value="Masculino" checked>
+				<label for="priority-low">Masculino</label>
+                            </div>
+                            <div class="4u 12u$(medium)">
+				<input type="radio" id="priority-normal" name="sexo" value="Femenino">
+				<label for="priority-normal">Femenino</label>
+                            </div>
+                            
+											
+										
+                            <input type="email" name="correo" id="correo" value="" placeholder="Correo" required/><br>
+                            <input type="text" name="telefono" id="telefono" value="" placeholder="Tel&edot;fono" onKeyPress="return validacp(event)"  maxlength="8" required/><br>
+                            <input type="text" name="codsec" id="codsec" value="" placeholder="Codigo de seguridad"  required/><br>
+ 
+                            <input type="password" name="contrasenia" id="contrasenia" value="" placeholder="Contrase&ntilde;a" required/><br>
+                
+                            <input class="button disabled" type="submit" value="Registrar">
+                        </div>
+                    </div>
+                   
+            </div>
+            </form>
+                        <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+                        
+                        
+                          
+    </body>
+</html>

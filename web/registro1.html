@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Saving Your Car</title>
+        <meta charset="utf-8" />
+		<title>Saving Your Car</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main_1.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+           
+    </head>
+    <script type="text/javascript">
+                    function validacp(e)
+            {
+                var keycar;
+                if(window.event)
+                    keycar = e.keyCode;
+                else
+                    if(e.which)
+                        keycar=e.which;
+                if(keycar>=48 && keycar<=57)
+                    return true;
+                else
+                    return false;
+                
+            }
+            function valida(e)
+            {
+                var keylet;
+                if(window.event)
+                    keylet = e.keyCode; /*IE*/
+                else
+                    if(e.which)
+                        keylet = e.which; //Netscape firefox opera
+                
+                if((keylet>=97&&keylet<=122)||keylet===8 ||keylet===32 || keylet===239 ||keylet>=65&&keylet<=90 ||keylet>=160&&keylet<=163)
+                  return true;
+                else
+                  return false;
+            }
+                    
+                </script>
+    <body oncopy="return false" oncut="return false" onpaste="return false" class="landing">
+        <div  >
+            <header id="header">
+					<h1 id="logo">Saving Your Car</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="principal.jsp">Inicio</a></li>
+							<li>
+                                                            <a>Siniestro</a>
+								<ul>
+									<li><a href="registro1.html">Registrar</a></li>
+                                                                        <li><a href="Aconsulta.jsp">Buscar</a></li>
+								</ul>
+							</li>
+                                                        
+                                                        <li>
+                                                      
+									<a>Codigo</a>
+                                                                        <ul>
+                                                                            <li> <a href="codigoalt.jsp">Alta</a> </li>
+                                                                            <li> <a href="codigocon.jsp">Consulta</a>  </li>
+                                                                        </ul>
+                                                        </li>
+							
+							<li><a href="Aperfil.jsp">Perfil</a></li>
+							<li>
+                                                              <form method="post" action="cerrar">
+                                                                
+                                                           <input type="submit" value= "logout" >     
+                                                            </form> </span></li>
+						</ul>
+					</nav>
+				</header>
+            <br><br><br>
+		
+            <form method="post" action="alta2" class="container 50%">
+                <div style="width:100%;">
+                    <center> <h2><b>Registro</b></h2></center>
+            <div style="width:90%; float:left;" >
+                   
+                    <div><h3>Siniestro</h3>
+                        <div class="6u 12u$(xsmall)">
+                            <input type="text" name="idSiniestro" id="idSiniestro" onKeyPress="return validacp(event)" value="" placeholder="N&uacute;mero de siniestro" required/><br>
+                            <input type="text" name="idVehiculo" id="idVehiculo" value="" placeholder="N&uacute;mero de veh&iacute;culo" required/><br>
+                            <input type="text" name="compania" id="compania" value="" placeholder="Compa&ntilde;&iacute;a" required/><br>
+                            <input type="email" name="correoU" id="correoU" value="" placeholder="Correo electr&oacute;nico" required/><br>
+                            <input type="text" name="asegurado" id="asegurado" value="" placeholder="Asegurado" required/><br>
+                            <input type="text" name="poliza" id="poliza" value="" placeholder="P&oacute;liza" required/><br>
+                            <div><h3>Vigencia de la Poliza</h3></div><div disabled>
+                             <input type="text" maxlength="2" size="2" name="vipoliza1" onKeyPress="return validacp(event)" id="vipoliza1" value="" placeholder="dd" required/>
+                             <input type="text" maxlength="2" size="2" name="vipoliza2" onKeyPress="return validacp(event)" id="vipoliza2" value="" placeholder="mm" required/>
+                             <input type="text" maxlength="4" size="4" name="vipoliza3" onKeyPress="return validacp(event)" id="vipoliza3" value="" placeholder="aaaa" required/><br>
+                             
+                             </div>
+                            <div><h3>Fecha del Siniestro</h3></div><div disabled>
+                             <input type="text" maxlength="2" size="2" name="fesi1" onKeyPress="return validacp(event)"  id="fesi1" value="" placeholder="dd" required/>
+                             <input type="text" maxlength="2" size="2" name="fesi2" onKeyPress="return validacp(event)"  id="fesi2" value="" placeholder="mm" required/>
+                             <input type="text" maxlength="4" size="4" name="fesi3" onKeyPress="return validacp(event)" id="fesi3" value="" placeholder="aaaa" required/><br>
+                             
+                             </div>
+                            <div><h3>Fecha de Apertura del Caso</h3></div><div disabled>
+                             <input type="text" maxlength="2" size="2" name="feap1" onKeyPress="return validacp(event)" id="feap1" value="" placeholder="dd"required/>
+                             <input type="text" maxlength="2" size="2" name="feap2" onKeyPress="return validacp(event)" id="feap2" value="" placeholder="mm" required/>
+                             <input type="text" maxlength="4" size="4" name="feap3" onKeyPress="return validacp(event)" id="feap3" value="" placeholder="aaaa" required/><br>
+                             
+                             </div>
+                            
+                            <div><h3>Fecha de Clausura del caso</h3></div><div disabled>
+                             <input type="text" maxlength="2" size="2" name="feclau1" onKeyPress="return validacp(event)"  id="feclau1"  value="" placeholder="dd" required/>
+                             <input type="text" maxlength="2" size="2" name="feclau2" onKeyPress="return validacp(event)"  id="feclau2" value="" placeholder="mm" required/>
+                             <input type="text" maxlength="4" size="4" name="feclau3" onKeyPress="return validacp(event)" id="feclau3" value="" placeholder="aaaa" required/><br>
+                             <br><br>
+                             <input type="text" name="info" id="info" value="" placeholder="Informe"/><br>
+                             <br><br>
+                             </div>
+                              
+                                 
+                        </div>
+                    </div>
+                <br><br>
+                            <input class="button enabled" type="submit" value="Registrar">
+                        </div>
+            <div style="width:10%; float:right;">
+                    <div align="center"><h3>Veh&iacute;culo</h3>
+                        <div class="6u 12u$(xsmall)">
+                            <input type="text" name="idVehiculo" id="idVehiculo" value="" placeholder="N&uacute;mero de veh&iacute;culo" onKeyPress="return validacp(event)" required/><br>
+                            <input type="text" name="nombreVehiculo" id="nombreVehiculo" value="" placeholder="Veh&iacute;culo"   required/><br>
+                            <input type="text" name="marca" id="marca" value="" placeholder="Marca" required/><br>
+                            <div class="select-wrapper">
+                                
+                                <select id="modelo" name="modelo">
+                                    <option >Modelo</option>
+                                    <script>
+                                    var myDate = new Date();
+                                    var year = myDate.getFullYear();
+                                    for(var i = year+1; i >=1930; i--){
+                                            document.write('<option value="'+i+'">'+i+'</option>');
+                                    }
+                                    </script>
+                                </select>
+                            </div><br>
+                            <input type="text" name="placas" id="placas" value="" placeholder="Placas"/><br>
+                            <input type="text" name="numeroSerie" id="numeroSerie"  value="" onKeyPress="return validacp(event)" maxlength="8"  placeholder="N&uacute;mero de serie"/><br>
+                            <input type="text" name="numeroMotor" id="numeroMotor" value="" onKeyPress="return validacp(event)" maxlength="8" placeholder="N&uacute;mero de motor"/><br>
+                            <input type="text" name="costo" id="costo" value="" onKeyPress="return validacp(event)" maxlength="8"  placeholder="Costo"/><br><br>
+                           
+                        </div>
+                    </div>
+                   
+            </div>
+                    
+                    
+                    
+                    
+                    </div>
+                   
+            </div>
+  
+</form>
+                        <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+                        
+                        
+                          
+    </body>
+</html>

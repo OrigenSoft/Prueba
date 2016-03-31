@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Saving Your Car</title>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body style="background-image:images/car.jpg ">
+        <div>
+            <header id="header">
+					<h1 id="logo">Saving Your Car</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="Usuario.jsp">Inicio</a></li>
+							<li>
+								<a href="perfil.jsp">Perfil</a>
+								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="busqueda.html">Buscar</a></li>
+                                                        <li>
+                                                             <form method="post" action="cerrar">
+                                                                
+                                                           <input type="submit" value= "logout" >     
+                                                            </form>    
+                                                        </li>
+						</ul>
+					</nav>
+				</header>
+            <br><br><br>
+		<div>
+                    <form method="post" action="sservlet">
+                        <center>
+                        <br>
+                        <h1>Escribe el ID del siniestro</h1>
+                        <br>
+                        <br>
+                        <input type="text" name="ID" id="ID">
+                        <br>
+                        <input type="submit" value="Consultar">
+                        </center>
+                    </form>
+                    
+                </div>
+        </div>
+    </body>
+</html>
+

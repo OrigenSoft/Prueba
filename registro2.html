@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Saving Your Car</title>
+        <meta charset="utf-8" />
+		<title>Saving Your Car</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+           
+    </head>
+    <script type="text/javascript">
+                    function validacp(e)
+            {
+                var keycar;
+                if(window.event)
+                    keycar = e.keyCode;
+                else
+                    if(e.which)
+                        keycar=e.which;
+                if(keycar>=48 && keycar<=57)
+                    return true;
+                else
+                    return false;
+                
+            }
+            function valida(e)
+            {
+                var keylet;
+                if(window.event)
+                    keylet = e.keyCode; /*IE*/
+                else
+                    if(e.which)
+                        keylet = e.which; //Netscape firefox opera
+                
+                if((keylet>=97&&keylet<=122)||keylet===8 ||keylet===32 || keylet===239 ||keylet>=65&&keylet<=90 ||keylet>=160&&keylet<=163)
+                  return true;
+                else
+                  return false;
+            }
+                    
+                </script>
+    <body class="landing">
+        <div>
+            <header id="header">
+					<h1 id="logo">Saving Your Car</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="principal.jsp">Inicio</a></li>
+							<li>
+                                                            <a>Siniestro</a>
+								<ul>
+									<li><a href="registro1.html">Registrar</a></li>
+                                                                        <li><a href="Aconsulta.jsp">Buscar</a></li>
+								</ul>
+							</li>
+                                                        <li>
+                                                            <a>Vehiculo</a>
+								<ul>
+									<li><a href="registro2.html">Registrar</a></li>
+                                                                        
+								</ul>
+							</li>
+							<li><a href="Aperfil.jsp">Perfil</a></li>
+							<li>
+                                                              <form method="post" action="cerrar">
+                                                                
+                                                           <input type="submit" value= "logout" >     
+                                                            </form> </span></li>
+						</ul>
+					</nav>
+				</header>
+            <br><br><br>
+		
+            <form method="post" action="alta3" class="container 50%">
+            <div align="center"><h2><b>Registro</b></h2>
+                    <div align="center"><h3>Veh&iacute;culo</h3>
+                        <div class="6u 12u$(xsmall)">
+                            <input type="text" name="idVehiculo" id="idVehiculo" value="" placeholder="N&uacute;mero de Veh&iacute;culo" onKeyPress="return validacp(event)" required/><br>
+                            <input type="text" name="nombreVehiculo" id="nombreVehiculo" value="" placeholder="Veh&iacute;culo"   required/><br>
+                            <input type="text" name="marca" id="marca" value="" placeholder="Marca" required/><br>
+                            <div class="select-wrapper">
+                                
+                                <select id="modelo" name="modelo">
+                                    <option >-Modelo-</option>
+                                    <script>
+                                    var myDate = new Date();
+                                    var year = myDate.getFullYear();
+                                    for(var i = year+1; i >=1930; i--){
+                                            document.write('<option value="'+i+'">'+i+'</option>');
+                                    }
+                                    </script>
+                                </select>
+                            </div><br>
+                            <input type="text" name="placas" id="placas" value="" placeholder="Placas"/><br>
+                            <input type="text" name="numeroSerie" id="numeroSerie"  value="" placeholder="N&uacute;mero de Serie"/><br>
+                            <input type="text" name="numeroMotor" id="numeroMotor" value="" placeholder="N&uacute;mero de Motor"/><br>
+                            <input type="text" name="costo" id="costo" value="" onKeyPress="return validacp(event)"  placeholder="Costo"/><br><br>
+                            <input class="button enabled" type="submit" value="Registrar">
+                        </div>
+                    </div>
+                   
+            </div>
+            </form>
+                        <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+                        
+                        
+                          
+    </body>
+</html>
